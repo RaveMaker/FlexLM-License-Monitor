@@ -44,7 +44,7 @@ if [ -a $emailfile ] ; then
     echo "**************************************"
     cat $emailfile
     echo "**************************************"
-    cat $emailfile |mail -s "licenses check on LicServer01 and LicServer02" $emailaddress
+    cat $emailfile |mail -s "licenses check" $emailaddress
     rm -f $emailfile
 fi
 
