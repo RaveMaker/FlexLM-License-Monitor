@@ -1,5 +1,5 @@
-BASH - FlexLM LMGRD License Monitor
-===================================
+FlexLM LMGRD License Monitor
+============================
 
 Runs a FlexLM licenses test on multiple servers and ports.
 
