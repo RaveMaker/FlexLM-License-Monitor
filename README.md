@@ -8,10 +8,9 @@ Sends a report in case of an expired/malfunctioned license.
 
 ### Installation
 
-1. Edit license-check.lst,
+1. Clone this script from github or copy the files manually to your prefered directory.
 
-
-    and fill it with your servers list (one in a row):
+2. Edit license-check.lst and fill it with your servers list (one in a row):
 
         AppName port@hostname
 
