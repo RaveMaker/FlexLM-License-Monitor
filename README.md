@@ -1,6 +1,5 @@
 BASH - FlexLM LMGRD License Monitor
 ===================================
-by [RaveMaker][RaveMaker].
 
 Runs a FlexLM licenses test on multiple servers and ports.
 
