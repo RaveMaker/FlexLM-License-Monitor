@@ -4,5 +4,4 @@
 # Create settings.cfg and updated your settings
 # --------------------------------------------------------
 
-workdir=/scripts
 emailaddress="mymail@mail.com"

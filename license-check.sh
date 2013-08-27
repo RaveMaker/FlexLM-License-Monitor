@@ -6,6 +6,7 @@
 # by RaveMaker - http://ravemaker.net
 
 # Load settings
+
 SCRIPTDIRECTORY=$(cd `dirname $0` && pwd)
 cd $SCRIPTDIRECTORY
 if [ -f settings.cfg ] ; then
@@ -16,6 +17,7 @@ else
     exit
 fi;
 
+workdir=`pwd`
 logfile=$workdir/license-check.run
 listfile=$workdir/license-check.lst
 finallogfile=$workdir/license-check-$(date +%y%m%d)
