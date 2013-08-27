@@ -23,13 +23,6 @@ emailfile=$workdir/license-check.email
 
 (
 cd $workdir/
-if [ -a $logfile ] ; then
-    echo ""
-    echo "Script is Running! check " $logfile
-    echo ""
-    exit; 
-fi
-
 cat $listfile | while read line
 do
 	appname=$(echo $line | awk '{print $(NF-1)}')
@@ -61,4 +54,3 @@ if [ -a $emailfile ] ; then
     cat $emailfile |mail -s "licenses check" $emailaddress
     rm -f $emailfile
 fi
-
