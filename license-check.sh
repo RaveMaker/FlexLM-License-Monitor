@@ -6,9 +6,6 @@
 # by RaveMaker - http://ravemaker.net
 
 # Load settings
-
-SCRIPTDIRECTORY=$(cd `dirname $0` && pwd)
-cd $SCRIPTDIRECTORY
 if [ -f settings.cfg ] ; then
     echo "Loading settings..."
     source settings.cfg
@@ -24,7 +21,7 @@ finallogfile=$workdir/license-check-$(date +%y%m%d)
 emailfile=$workdir/license-check.email
 
 (
-cd $workdir/
+
 cat $listfile | while read line
 do
 	appname=$(echo $line | awk '{print $(NF-1)}')
@@ -47,6 +44,7 @@ echo "*****           All Done         *****"
 echo "**************************************"
 echo ""
 ) 2>&1 | tee -a $logfile
+
 mv $logfile $finallogfile
 
 if [ -a $emailfile ] ; then 
