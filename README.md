@@ -20,6 +20,8 @@ Sends a report in case of an expired/malfunctioned license.
     for example (leave a blank line in the end of the file):
 
         Cadence 2000@LicServer
-        
+
+3. Create settings.cfg from settings.cfg.example and input your e-mail address.
+
 by [RaveMaker][RaveMaker].
 [RaveMaker]: http://ravemaker.net
