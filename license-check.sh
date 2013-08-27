@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Runs a FlexLM licenses test on multiple servers and ports.
+# Sends a report in case of an expired/malfunctioned license.
+#
+# by RaveMaker - http://ravemaker.net
+
 workdir=/scripts
 logfile=$workdir/license-check.run
 listfile=$workdir/license-check.lst
