@@ -5,12 +5,21 @@
 #
 # by RaveMaker - http://ravemaker.net
 
-workdir=/scripts
+# Load settings
+SCRIPTDIRECTORY=$(cd `dirname $0` && pwd)
+cd $SCRIPTDIRECTORY
+if [ -f settings.cfg ] ; then
+    echo "Loading settings..."
+    source settings.cfg
+else
+    echo "ERROR: Create settings.cfg (from settings.cfg.example)"
+    exit
+fi;
+
 logfile=$workdir/license-check.run
 listfile=$workdir/license-check.lst
 finallogfile=$workdir/license-check-$(date +%y%m%d)
 emailfile=$workdir/license-check.email
-emailaddress="mymail@mail.com"
 
 (
 cd $workdir/
