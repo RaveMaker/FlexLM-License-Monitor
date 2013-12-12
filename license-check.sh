@@ -17,15 +17,15 @@ fi;
 workdir=`pwd`
 logfile=$workdir/license-check.run
 listfile=$workdir/license-check.lst
-finallogfile=$workdir/license-check-$(date +%y%m%d)
+finallogfile=$workdir/license-check-$(date +%Y%m%d)
 emailfile=$workdir/license-check.email
 
 (
 
 cat $listfile | while read line
 do
-	appname=$(echo $line | awk '{print $(NF-1)}')
-	portserver=$(echo $line | awk '{print $NF}')
+	appname="$(echo $line | awk '{print $(NF-1)}')"
+	portserver="$(echo $line | awk '{print $NF}')"
 	/usr/bin/lmutil lmstat -a -c $portserver |grep Error
 	if [ $? != 1 ] ; then
 	    echo $appname license DOWN - $portserver >> $emailfile
