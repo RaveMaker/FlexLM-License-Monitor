@@ -23,5 +23,6 @@ Sends a report in case of an expired/malfunctioned license.
 
 3. Create settings.cfg from settings.cfg.example and input your e-mail address.
 
-by [RaveMaker][RaveMaker].
+Author: [RaveMaker][RaveMaker].
+
 [RaveMaker]: http://ravemaker.net
