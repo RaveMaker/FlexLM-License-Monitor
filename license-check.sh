@@ -21,7 +21,6 @@ finallogfile=$workdir/license-check-$(date +%Y%m%d)
 emailfile=$workdir/license-check.email
 
 (
-
   while read -r line; do
     appname="$(echo "$line" | awk '{print $(NF-1)}')"
     portserver="$(echo "$line" | awk '{print $NF}')"
